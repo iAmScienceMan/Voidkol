@@ -2,6 +2,7 @@
   parent: [MobObserver, InventoryBase]
   id: AdminObserver
   name: admin observer
+  description: Админу стыдно за тебя..
   categories: [ HideSpawnMenu ]
   components:
   - type: ContentEye
@@ -21,6 +22,8 @@
   - type: ComplexInteraction
   - type: Puller
   - type: CombatMode
+  - type: Sprite
+    sprite: Voidkol/Lyutsik/Mobs/Ghosts/ghost_admin.rsi
   - type: Physics
     ignorePaused: true
     bodyType: Kinematic
