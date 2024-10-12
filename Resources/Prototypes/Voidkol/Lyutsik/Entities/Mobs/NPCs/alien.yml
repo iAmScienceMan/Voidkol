@@ -124,7 +124,7 @@
   - type: Prying
     pryPowered: true
     force: true
-    speedModifier: 1.5
+    speedModifier: 5.0
     useSound:
       path: /Audio/Machines/airlock_creaking.ogg
   - type: Hunger

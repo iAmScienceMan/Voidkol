@@ -83,8 +83,6 @@
   - type: NoSlip
   - type: Perishable
     molsPerSecondPerUnitMass: 0.0005
-  - type: Speech
-    speechVerb: LargeMob
   - type: Reform
     actionPrototype: AlienBabyAction
     reformTime: 0
