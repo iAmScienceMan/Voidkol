@@ -16,7 +16,8 @@
   - type: NpcFactionMember
     factions:
     - Alien
-  - type: Hands
+  - type: Puller
+    needsHands: false
   - type: ComplexInteraction
   - type: Sprite
     drawdepth: Mobs
@@ -67,17 +68,16 @@
     damage:
       types:
         Brute: 10
-        Slash: 15
+        Slash: 5
   - type: DamageStateVisuals
     rotate: true
     states:
       Alive:
-        Base: running
+        Base: alien
       Critical:
         Base: crit
       Dead:
         Base: dead
-  - type: Puller
   - type: Butcherable
     butcheringType: Spike
     spawned:

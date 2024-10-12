@@ -18,7 +18,8 @@
   - type: NpcFactionMember
     factions:
     - Alien
-  - type: Hands
+  - type: Puller
+    needsHands: false
   - type: ComplexInteraction
   - type: Sprite
     drawdepth: Mobs
@@ -74,12 +75,11 @@
     rotate: true
     states:
       Alive:
-        Base: running
+        Base: alien
       Critical:
         Base: crit
       Dead:
         Base: dead
-  - type: Puller
   - type: Butcherable
     butcheringType: Spike
     spawned:
@@ -135,3 +135,5 @@
       Starving: 50
       Dead: 0
     baseDecayRate: 0.5
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 5.5
