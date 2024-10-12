@@ -71,6 +71,7 @@
       types:
         Brute: 25
         Slash: 30
+        Structural: 50
   - type: DamageStateVisuals
     rotate: true
     states:
