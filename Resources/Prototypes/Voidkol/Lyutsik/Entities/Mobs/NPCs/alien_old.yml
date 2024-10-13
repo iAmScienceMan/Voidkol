@@ -13,9 +13,26 @@
     groups:
       Flammable: [Touch]
       Extinguish: [Touch]
+  - type: HTN
+    rootTask:
+      task: XenoCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
   - type: NpcFactionMember
     factions:
-    - Alien
+    - Xeno
+  - type: Vocal
+    sounds:
+      Unsexed: UnsexedAlien
+  - type: Speech
+    speechSounds: AlienSpeech
   - type: Puller
     needsHands: false
   - type: ComplexInteraction
@@ -99,8 +116,6 @@
   - type: NoSlip
   - type: Perishable
     molsPerSecondPerUnitMass: 0.0005
-  - type: Speech
-    speechVerb: LargeMob
   - type: Prying
     pryPowered: true
     force: true

@@ -10,14 +10,31 @@
   - type: CombatMode
   - type: InputMover
   - type: MobMover
+  - type: MindContainer
   - type: Reactive
     groups:
       Flammable: [Touch]
       Extinguish: [Touch]
-  - type: MindContainer
+  - type: HTN
+    rootTask:
+      task: XenoCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
   - type: NpcFactionMember
     factions:
-    - Alien
+    - Xeno
+  - type: Vocal
+    sounds:
+      Unsexed: UnsexedAlien
+  - type: Speech
+    speechSounds: AlienSpeech
   - type: Puller
     needsHands: false
   - type: ComplexInteraction
@@ -53,11 +70,11 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      600: Critical
+      650: Critical
       700: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      500: 0.5
+      600: 0.7
   - type: Stamina
     critThreshold: 1000
   - type: Bloodstream
@@ -110,21 +127,19 @@
   - type: NoSlip
   - type: Perishable
     molsPerSecondPerUnitMass: 0.0005
-  - type: Speech
-    speechVerb: LargeMob
   - type: Devourer
     foodPreference: Humanoid
     shouldStoreDevoured: true
     devourTime: 1.5
     chemical: Ichor
-    healRate: 20.0
+    healRate: 15.0
     whitelist:
       components:
       - MobState
   - type: Prying
     pryPowered: true
     force: true
-    speedModifier: 5.0
+    speedModifier: 9.0
     useSound:
       path: /Audio/Machines/airlock_creaking.ogg
   - type: Hunger

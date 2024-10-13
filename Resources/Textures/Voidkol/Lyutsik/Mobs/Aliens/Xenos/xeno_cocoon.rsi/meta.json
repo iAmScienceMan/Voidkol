@@ -8,11 +8,11 @@
   },
   "states": [
     {
-      "name": "xeno_cocoon",
+      "name": "alien",
       "directions": 1
     },
     {
-      "name": "xeno_shucks",
+      "name": "dead",
       "directions": 1
     }
   ]

@@ -13,15 +13,26 @@
   - type: MindContainer
   - type: NpcFactionMember
     factions:
-    - Alien
+    - Xeno
   - type: ComplexInteraction
   - type: Transform
     anchored: true
     noRot: true
   - type: Sprite
     drawdepth: Mobs
-    sprite: Voidkol/Lyutsik/Structures/Specific/xeno_cocoon.rsi
-    state: xeno_cocoon
+    sprite: Voidkol/Lyutsik/Mobs/Aliens/Xenos/xeno_cocoon.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alien
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: alien
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
   - type: Fixtures
     fixtures:
       fix1:
@@ -46,13 +57,6 @@
   - type: Bloodstream
     bloodReagent: FluorosulfuricAcid
     bloodMaxVolume: 650
-  - type: DamageStateVisuals
-    rotate: true
-    states:
-      Alive:
-        Base: running
-      Dead:
-        Base: dead
   - type: Puller
   - type: Butcherable
     butcheringType: Spike

@@ -14,12 +14,15 @@
           MeatLaserImpact
   - type: Transform
     anchored: true
+  - type: NpcFactionMember
+    factions:
+    - Xeno
   - type: Clickable
   - type: InteractionOutline
   - type: Sprite
-    sprite: Voidkol/Lyutsik/Structures/Specific/xeno_cocoon.rsi
+    sprite: Voidkol/Lyutsik/Mobs/Aliens/Xenos/xeno_cocoon.rsi
     layers:
-      - state: xeno_shucks
+      - state: dead
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic
